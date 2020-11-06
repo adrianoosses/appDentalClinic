@@ -1,0 +1,14 @@
+sequelize model:create --name User --attributes name:string,last_name:string,role:enum:'{Admin,Doctor,Client}'state:boolean,birth:date,card:integer,
+usuario:
+- name
+- last_name
+- email
+- role: enum
+- address
+- dni
+- born
+- covid: boolean
+- history
+- observations
+- defaulter: boolean
+- allergies: string

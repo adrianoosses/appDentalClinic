@@ -9,9 +9,12 @@ Dental clinic management app.
 
 <a name="inst"></a>
 ## INSTRUCTIONS
-Initialize project
+1. Heroku
+
+2. Initialize project
 ```
 nodemon app.js
 ```
+## DATABASE
+<img src="./entity-relationship-diagram.svg">
 
-Heroku
