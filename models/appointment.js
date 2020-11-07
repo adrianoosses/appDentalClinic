@@ -2,7 +2,7 @@
 const {
   Model
 } = require('sequelize');
-exports.funsec = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   class Appointment extends Model {
     
     // Helper method for defining associations.
@@ -27,7 +27,7 @@ exports.funsec = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Appointment',
   });
-  console.log("Appoint: " + Appointment);
+  //console.log("Appoint: " + Appointment);
   return Appointment;
 };
 
