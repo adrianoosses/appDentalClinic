@@ -10,3 +10,15 @@ exports.getAllAppointments =  (req, res) =>{
             })
         })
 }
+
+exports.getPendingAppointments =  (req, res) =>{
+    let q = `SELECT * FROM APPOINTMENTS WHERE hour > CURRENT_TIME AND status = 'Pending'`;
+    sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
+        .then(appointments => res.send(appointments))
+        .catch(error => {
+            console.error(error);
+            res.status(500).send({
+                message: 'Problem getting appointments.'
+            })
+        })
+}

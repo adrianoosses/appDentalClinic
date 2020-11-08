@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      
     static associate(models) {
       // define association here
-      this.belongsTo(models.User);
+      //this.belongsTo(models.User);
     }
   };
   Appointment.init({
@@ -27,28 +27,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Appointment',
   });
-  //console.log("Appoint: " + Appointment);
   return Appointment;
 };
-
-
-/*
-const { Sequelize, Model, DataTypes } = require("sequelize");
-const sequelize = new Sequelize("sqlite::memory:");
-
-exports.Appointment = sequelize.define("appointment", {
-    patient_id: DataTypes.INTEGER,
-    doctor_id: DataTypes.INTEGER,
-    hour: DataTypes.DATE,
-    room: DataTypes.STRING,
-    service: DataTypes.STRING,
-    comments: DataTypes.STRING,
-    price: DataTypes.FLOAT,
-    status: DataTypes.ENUM('Pending', 'Completed', 'Cancelled')
-});
-*/
-/*
-(async () => {
-  await sequelize.sync({ force: true });
-  // Code here
-})();*/

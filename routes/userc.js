@@ -3,7 +3,7 @@ const {
     getAllUsers, 
     register,
     login
-} = require('../controllers/user.js');
+} = require('../controllers/userc.js');
 
 router.get('/getAll', getAllUsers);
 router.post('/register', register);

@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql2/promise');
 const app = express();
 let ap = require('./routes/appointment.js');
-let us = require('./routes/user.js');
+let us = require('./routes/userc.js');
 
 
 // asignacion del puerto 3000 para el servidor
