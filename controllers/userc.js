@@ -16,16 +16,6 @@ exports.getAllUsers = (req, res) =>{
 
 exports.register = (req, res) =>{
     let msg = 'User added.';
-    /*
-    let {name, password, last_name, email, role, address, dni, born, covid, history_id, comment, 
-        defaulter, allergies, createdAt, updatedAt
-    } = req.body;
-    
-    let q = `INSERT INTO USERCS (name, password, last_name, email, role, address, dni, born, covid, history_id,
-        comment, defaulter, allergies, createdAt, updatedAt)
-        VALUES ('${name}', '${password}', '${last_name}', '${email}', '${role}', '${address}', '${dni}', 
-        '${born}', ${covid}, ${history_id}, '${comment}', ${defaulter}, '${allergies}', 
-        '${createdAt}', '${updatedAt}')`; */
         let {name, password, last_name, email, role, address, dni, born, covid, history_id, observations,
             defaulter, createdAt, updatedAt
         } = req.body;
