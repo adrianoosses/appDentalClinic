@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "1234",
-    "database": "dbclinic2",
+    "database": "dbclinic3",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
