@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "f18baf1a-f9be-4367-82df-3e97704b054d",
+		"name": "appClinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:3001/appointment/getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"adriano@geekshubs.com\", \"password\": \"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/appointment/getAll",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"appointment",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/user/getAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyNGludGVuZGVudGUzQHRpYS5jb20iLCJpYXQiOjE2MDQ5NDUxMzMsImV4cCI6MTYwNTAzMTUzM30.K09gu3TCdMrIKyKXDDQcp-D9jXIHREa6ZRD3Fuhgd8E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"super3intendente3@tia.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/user/getAll",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/appointment/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/appointment/delete",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"appointment",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/appointment/getPending",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"supe1@tia.com\", \r\n\"password\": \"1234578\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/appointment/getPending",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"appointment",
+						"getPending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/appointment/insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient_id\": \"1\", \r\n    \"doctor_id\": \"2\",\r\n    \"hour\": \"2020/11/15\",\r\n    \"room\": \"A4\",\r\n    \"service\": \"Tooth extraction\",\r\n    \"comments\": \"None\",\r\n    \"price\": \"24.32\",\r\n    \"status\": \"Pending\",\r\n    \"createdAt\": \"2020/11/8\",\r\n    \"updatedAt\": \"2020/11/8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/appointment/insert",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"appointment",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/user/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"supe1@tia.com\", \r\n\"password\": \"1234578\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/user/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/user/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Super3\", \r\n    \"password\": \"12345678\",\r\n    \"last_name\": \"Intendente3\",\r\n    \"email\": \"super4intendente3@tia.com\",\r\n    \"role\": \"CLIENT\",\r\n    \"address\": \"Sevilla\",\r\n    \"dni\": \"523456789F\",\r\n    \"born\": \"1980/3/1\",\r\n    \"covid\": \"TRUE\",\r\n    \"history_id\": \"5\",\r\n    \"comment\": \"The BOSS\",\r\n    \"defaulter\": \"FALSE\",\r\n    \"allergies\": \"None\",\r\n    \"createdAt\": \"2020/11/8\",\r\n    \"updatedAt\": \"2020/11/8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/user/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/user/logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"super4intendente3@tia.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/user/logout",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3001/appointment/getMy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "100",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkcmlhbm9AZ2Vla3NodWJzLmNvbSIsImlhdCI6MTYwNDQzMTI4OSwiZXhwIjoxNjA0NTE3Njg5fQ.uP7MOD_P_JqLEHhQzTCiimrGvjiB1Iz2laxDA5BFKb4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"email\": \"super4intendente3@tia.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3001/appointment/getMy",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"appointment",
+						"getMy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

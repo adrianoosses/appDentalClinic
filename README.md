@@ -48,7 +48,7 @@ App allows an user makes actions. This user can be admin doctor or patient. In s
 | GET | /user/login | Login of user given email and password, and generate a token |  |  |
 | GET | /user/logout | Log out of user given an email |  |  |
 
-See the postman file for examples.
+See the postman file appClinic.postman_collection.json for examples.
 
 ### Examples
 You can find examples for test in commands.txt file.
