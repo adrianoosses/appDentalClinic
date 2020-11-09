@@ -23,12 +23,32 @@ exports.getPendingAppointments =  (req, res) =>{
         })
 }
 
+exports.getMyPendingAppointments =  (req, res) =>{
+    let {email} = req.body;
+    let q = `SELECT * 
+    FROM APPOINTMENTS
+    INNER JOIN USRS
+    ON APPOINTMENTS.patient_id = USRS.id 
+    WHERE hour > CURRENT_TIME 
+    AND status = 'Pending'
+    AND USRS.email = '${email}'
+    `;
+    
+    sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
+        .then(appointments => res.send(appointments))
+        .catch(error => {
+            console.error(error);
+            res.status(500).send({
+                message: 'Problem getting appointments.'
+            })
+        })
+}
+
 exports.deleteAppointment =  (req, res) =>{
     let {id} = req.body;
-    
     let q = `DELETE FROM APPOINTMENTS WHERE id = ${id}`;
     sequelize.query(q, {type: sequelize.QueryTypes.DELETE})
-        .then(appointments => res.send(appointments))
+        .then(() => res.json({error: 'Appointment deleted.'}))
         .catch(error => {
             console.error(error);
             res.status(500).send({

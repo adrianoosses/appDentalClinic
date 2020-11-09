@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Appointment extends Model {
     
@@ -11,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      
     static associate(models) {
       // define association here
-      //this.belongsTo(models.User);
+      this.hasMany(models.Usr);
     }
   };
   Appointment.init({

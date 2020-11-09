@@ -8,17 +8,6 @@ let us = require('./routes/usr.js');
 // asignacion del puerto 3000 para el servidor
 const PORT = 3001;
 
-/*
-const conn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    database: 'dbclinic'
-})
-*/
-
-// Importo el middleware de auth
-//const auth = require('./middleware/auth');
-
 
 app.use(express.json());
 
@@ -32,11 +21,4 @@ app.use(function(req, res, next){
 app.use('/appointment', ap.routes);
 app.use('/user', us.routes);
 
-
-
-//Enrutado a endpoints de citas
-// app.use('/citas', ordersRouter);
-
-//Enrutado a endpoints de pedidos
-//Endpoint de pedidos
 app.listen(PORT, () => console.log(`Servidor funcionando en puerto ${PORT}`));

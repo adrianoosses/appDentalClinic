@@ -1,14 +1,82 @@
-sequelize model:create --name Userc --attributes name:string,password:string,last_name:string,email:string,role:enum:'{Admin,Doctor,Client}',address:string,dni:string,born:date,covid:boolean,history_id:integer,comments:string,defaulter:boolean
-usuario:
-- name
-- last_name
-- password
-- email
-- role: enum
-- address
-- dni
-- born
-- covid: boolean
-- history
-- comments
-- defaulter: boolean
+sequelize model:create --name Usr --attributes name:string,password:string,token:string,last_name:string,email:string,role:enum:'{Admin,Doctor,Client}',address:string,dni:string,born:date,covid:boolean,history_id:integer,comments:string,defaulter:boolean
+
+{
+    "name": "Super3", 
+    "password": "12345678",
+    "token":"",
+    "last_name": "Intendente3",
+    "email": "super4intendente3@tia.com",
+    "role": "CLIENT",
+    "address": "Sevilla",
+    "dni": "523456789F",
+    "born": "1980/3/1",
+    "covid": "TRUE",
+    "history_id": "5",
+    "comment": "The BOSS",
+    "defaulter": "FALSE",
+    "allergies": "None",
+    "createdAt": "2020/11/8",
+    "updatedAt": "2020/11/8"
+}
+
+{
+    "name": "Filemon", 
+    "password": "12345678",
+    "token": "",
+    "last_name": "Pi",
+    "email": "filemon@tia.com",
+    "role": "ADMIN",
+    "address": "Barcelona",
+    "dni": "123456789A",
+    "born": "1980/1/1",
+    "covid": "FALSE",
+    "history_id": 1,
+    "comment": "Secret Agent",
+    "defaulter": "FALSE",
+    "allergies": "None",
+    "createdAt": "2020/11/8",
+    "updatedAt": "2020/11/8"
+}
+
+
+{
+    "name": "Doctor", 
+    "password": "12345678",
+    "token": "",
+    "last_name": "Bacterio",
+    "email": "dr.bactorio@tia.com",
+    "role": "DOCTOR",
+    "address": "Barcelona",
+    "dni": "223456789B",
+    "born": "1970/1/1",
+    "covid": "FALSE",
+    "history_id": 1,
+    "comment": "Doctor and chemical",
+    "defaulter": "FALSE",
+    "allergies": "None",
+    "createdAt": "2020/11/8",
+    "updatedAt": "2020/11/8"
+}
+
+{
+    "name": "Mortadelo", 
+    "password": "12345678",
+    "token": "",
+    "last_name": "Perez",
+    "email": "mortadelop@tia.com",
+    "role": "ADMIN",
+    "address": "Barcelona",
+    "dni": "123456789A",
+    "born": "1980/1/1",
+    "covid": "FALSE",
+    "history_id": 1,
+    "comment": "Secret Agent",
+    "defaulter": "FALSE",
+    "allergies": "None",
+    "createdAt": "2020/11/8",
+    "updatedAt": "2020/11/8"
+}
+
+-----------------------------------
+INSERT INTO APPOINTMENTS VALUES (1, 3, 2, '2020/11/7', "A2", "Revision", "None", 14.34, 'Pending', '2020/11/6', '2020/11/06'); 
+INSERT INTO APPOINTMENTS VALUES (2, 1, 2, '2020/11/10', "A3", "Tooth extraction", "None", 14.34, 'Pending', '2020/11/6', '2020/11/06'); 

@@ -14,7 +14,7 @@ exports.auth = async (req, res, next) => {
 }
 
 exports.isAdmin = async (req, res, next) => {
-    let {email} = req.body;
+    let {email} = req.headers;
     let q = `SELECT role FROM USRS WHERE email='${email}'`;
     let roleDb = sequelize.query(q, {type: sequelize.QueryTypes.SELECT});
     console.log("roleDb"+ (await roleDb)[0].role);
