@@ -6,7 +6,7 @@ let us = require('./routes/usr.js');
 
 
 // asignacion del puerto 3000 para el servidor
-const PORT = 3001;
+const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
