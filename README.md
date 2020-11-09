@@ -4,7 +4,7 @@ Backend of app aimed at management of dental appointments by admins or clients.
 1. [ SET UP ](#inst) :point_left:
 2. [ DATABASE ](#db) :point_left:
 3. [ RUN ](#run) :point_left:
-4. [ TECHNOLOGIES USED ](#tech) :pointleft:
+4. [ TECHNOLOGIES USED ](#tech) :point_left:
 5. [ AUTHOR ](#author) :point_left:
 
 <a name="inst"></a>
@@ -18,9 +18,9 @@ Backend of app aimed at management of dental appointments by admins or clients.
     - 6) sequelize init
 
 ### Project set up
-1. Heroku
-
-2. Download the project from this GitHub.
+    - Option 1: Heroku
+    - Option 2: GitHub Pages: https://adrianoosses.github.io/appDentalClinic/.
+    - Option 3:  Download the project from this GitHub.
 
 <a name="db"></a>
 ## DATABASE
