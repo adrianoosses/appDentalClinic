@@ -17,9 +17,9 @@ Backend of app aimed at management of dental appointments by admins or clients.
     - 5) npm i sequelize-cli
 
 ### Project set up
-Option 1: Heroku: [https://app-dental-clinic.herokuapp.com/]: https://app-dental-clinic.herokuapp.com/
-Option 2: GitHub Pages: [https://adrianoosses.github.io/appDentalClinic/]: https://app-dental-clinic.herokuapp.com/
-Option 3: Download the project from this GitHub.
+- Option 1: Heroku: https://app-dental-clinic.herokuapp.com/ <br>
+- Option 2: GitHub Pages: https://app-dental-clinic.herokuapp.com/ <br>
+- Option 3: Download the project from this GitHub.
 
 <a name="db"></a>
 ## DATABASE
