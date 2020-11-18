@@ -10,7 +10,7 @@ exports.getAllUsers = (req, res) =>{
         .catch(error => {
             console.error(error);
             res.status(500).send({
-                message: 'Problem getting appointments.'
+                message: 'Problem getting users.'
             })
         })    
 }
