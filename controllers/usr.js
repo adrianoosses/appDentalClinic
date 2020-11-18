@@ -64,16 +64,21 @@ exports.login = async(req, res) =>{
             console.log("Correct user and token. LOOGED");
             msg = "Correct user and token. LOOGED";
             resul = true;
+            res.json({"msg":msg});
         }else{
             console.log("Wrong user or password");
             msg = "Wrong user or password";
             resul = false;
+            res.status(400).send({
+                message: 'Wrong'
+            });
         }
     } else{
         msg = "Wrong user or password";
+        res.json({"msg":msg});
         resul =  true;
     }
-    res.json({"msg":msg});
+    
     return resul;
 };
 
