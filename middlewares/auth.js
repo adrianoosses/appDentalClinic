@@ -1,4 +1,7 @@
 const {sequelize} = require('../models/index.js');
+var jwt = require('jsonwebtoken');
+let claveToken = "fdfdkjfd.sa#fjpdfjkl";
+
 exports.auth = async (req, res, next) => {
     let {email} = req.body;
     const token = req.headers.authorization;
@@ -14,8 +17,9 @@ exports.auth = async (req, res, next) => {
 }
 
 exports.isAdmin = async (req, res, next) => {
-    let {email} = req.headers;
-    let q = `SELECT role FROM USRS WHERE email='${email}'`;
+    let {authorization, email} = req.headers;
+    let dataToken = jwt.verify(authorization, claveToken)
+    let q = `SELECT role FROM USRS WHERE email='${dataToken.email}'`;
     let roleDb = sequelize.query(q, {type: sequelize.QueryTypes.SELECT});
     console.log("roleDb"+ (await roleDb)[0].role);
     if( (await roleDb)[0].role === 'Admin'){
