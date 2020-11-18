@@ -74,11 +74,12 @@ exports.login = async(req, res) =>{
             });
         }
     } else{
+        console.error(chalk.red(error))
         res.status(400).send({
-            message: 'Wrong'
+            message: 'Wrong',
+            error
         });
-        msg = "Wrong user or password";
-        res.json({"msg":msg});
+        msg = "Wrong user or password 2";
         resul =  true;
     }
     
