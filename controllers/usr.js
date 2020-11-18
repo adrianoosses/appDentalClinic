@@ -74,6 +74,7 @@ exports.login = async(req, res) =>{
             });
         }
     } else{
+        res.status(400).send({
         msg = "Wrong user or password";
         res.json({"msg":msg});
         resul =  true;
