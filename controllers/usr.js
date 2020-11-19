@@ -1,4 +1,3 @@
-
 const {Usr, sequelize} = require('../models/index.js');
 let jwt = require('jsonwebtoken');
 let claveToken = "fdfdkjfd.sa#fjpdfjkl";
