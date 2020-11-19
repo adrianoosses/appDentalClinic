@@ -4,6 +4,7 @@ const app = express();
 let ap = require('./routes/appointment.js');
 let us = require('./routes/usr.js');
 let cors = require('cors');
+const { json } = require('sequelize/types');
 
 
 // asignacion del puerto 3000 para el servidor
