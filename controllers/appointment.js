@@ -12,9 +12,12 @@ exports.getAllAppointments =  (req, res) =>{
 }
 
 exports.getPendingAppointments =  (req, res) =>{
+    console.log("GETTING PENDING APPOINTMENTS")
     let q = `SELECT * FROM APPOINTMENTS WHERE hour > CURRENT_TIME AND status = 'Pending'`;
     sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
-        .then(appointments => res.send(appointments))
+        .then(appointments => res
+            .status(200)
+            .send(appointments))
         .catch(error => {
             console.error(error);
             res.status(500).send({

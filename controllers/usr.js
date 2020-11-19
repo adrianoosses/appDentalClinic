@@ -26,9 +26,14 @@ exports.register = (req, res) =>{
             VALUES ('${name}', '${password}', '${token}', '${last_name}', '${email}', '${role}', '${address}', 
             '${dni}', '${born}', ${covid}, ${history_id}, '${comments}', ${defaulter},
             '${createdAt}', '${updatedAt}')`;
-    sequelize.query(q, {type: sequelize.QueryTypes.INSERT})
-    
-    res.json({"message":msg}); 
+    try{
+        sequelize.query(q, {type: sequelize.QueryTypes.INSERT})
+        res.status(200)
+        .json({message:"Good" + msg});
+    }catch{
+        res.status(400)
+        .json({error:"Wrong"});
+    }
     return true;
 };
 
@@ -69,20 +74,20 @@ exports.login = async(req, res) =>{
             msg = "Correct user and token. LOOGED";
             resul = true;
             res.status(200).send({
-                message: 'Good'
+                error: 'Good'
             });
         }else{
             console.log("Wrong user or password");
             msg = "Wrong user or password";
             resul = false;
             res.status(400).send({
-                message: 'Wrong'
+                error: 'Wrong'
             });
         }
     } else{
         //console.error(chalk.red(error))
         res.status(400).send({
-            message: 'Wrong'
+            error: 'Wrong'
         });
         resul =  true;
     } 
