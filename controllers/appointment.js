@@ -13,7 +13,7 @@ exports.getAllAppointments =  (req, res) =>{
 
 exports.getPendingAppointments =  (req, res) =>{
     console.log("GETTING PENDING APPOINTMENTS")
-    let q = `SELECT * FROM APPOINTMENTS WHERE hour > CURRENT_TIME AND status = 'Pending'`;
+    let q = `SELECT * FROM APPOINTMENTS WHERE hour > CURRENT_DATE AND status = 'Pending';`;
     sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
         .then(appointments => res
             .status(200)

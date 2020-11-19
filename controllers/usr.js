@@ -74,7 +74,7 @@ exports.login = async(req, res) =>{
             msg = "Correct user and token. LOOGED";
             //res.setHeader('Authorization', token);
             res.status(200).send({
-                message: 'Good'.password,
+                message: 'Good',
                 tokenSend: token
             });
             resul = true;
