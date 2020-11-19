@@ -27,6 +27,9 @@ exports.isAdmin = async (req, res, next) => {
         next();
     } else{
         console.log("ERROR: User is not admin.");
-        res.json({error:"ERROR: not authorized."})
+        res
+        .status(400)
+        .json({error:"ERROR: not authorized."})
+
     }
 }
