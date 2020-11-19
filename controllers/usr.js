@@ -73,6 +73,7 @@ exports.login = async(req, res) =>{
             console.log("Correct user and token. LOOGED");
             msg = "Correct user and token. LOOGED";
             resul = true;
+            res.setHeader('Authorization', token);
             res.status(200).send({
                 error: 'Good'
             });

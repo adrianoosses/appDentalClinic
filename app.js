@@ -15,7 +15,8 @@ app.use(cors());
 /*
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Headers', 'Authorization, 
+    X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
@@ -26,3 +27,7 @@ app.use('/user', us.routes);
 app.get('/', (req, res) => res.send('Welcome'));
 
 app.listen(PORT, () => console.log(`Servidor funcionando en puerto ${PORT}`));
+
+['unhandledRejection', 'uncaughtException'].forEach(event => process.on(event, (err) => {
+    console.error(`unhandled error: ${err.stack || err}`);
+}));
