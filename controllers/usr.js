@@ -2,6 +2,7 @@
 const {Usr, sequelize} = require('../models/index.js');
 let jwt = require('jsonwebtoken');
 let claveToken = "fdfdkjfd.sa#fjpdfjkl";
+const chalk = require('chalk');
 
 exports.getAllUsers = (req, res) =>{
     let q = `SELECT * FROM USRS`
@@ -79,10 +80,9 @@ exports.login = async(req, res) =>{
             });
         }
     } else{
-        console.error(chalk.red(error))
+        //console.error(chalk.red(error))
         res.status(400).send({
-            message: 'Wrong',
-            error
+            message: 'Wrong'
         });
         resul =  true;
     } 
