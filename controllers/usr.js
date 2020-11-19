@@ -72,18 +72,19 @@ exports.login = async(req, res) =>{
             sequelize.query(q, {type: sequelize.QueryTypes.UPDATE})
             console.log("Correct user and token. LOOGED");
             msg = "Correct user and token. LOOGED";
-            resul = true;
-            res.setHeader('Authorization', token);
+            //res.setHeader('Authorization', token);
             res.status(200).send({
-                error: 'Good'
+                message: 'Good'.password,
+                tokenSend: token
             });
+            resul = true;
         }else{
             console.log("Wrong user or password");
             msg = "Wrong user or password";
-            resul = false;
             res.status(400).send({
                 error: 'Wrong'
             });
+            resul = false;
         }
     } else{
         //console.error(chalk.red(error))
