@@ -34,7 +34,9 @@ exports.register = (req, res) =>{
 let getUsersByEmail = async(req, res) =>{
     let {email} = req.body;
     console.log("HOLAAAAAAAAAAAAAA");
-    console.log("req.body" + req.body);
+    console.log("req.body.email" + req.body.email);
+    console.log("req.body.name" + req.body.name);
+    console.log("to req.body.name" + typeof(req.body.name));
     let q = `SELECT * FROM USRS WHERE email='${email}'`;
     return sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
 }
