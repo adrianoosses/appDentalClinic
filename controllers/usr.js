@@ -33,15 +33,13 @@ exports.register = (req, res) =>{
 
 let getUsersByEmail = async(req, res) =>{
     let {email} = req.body;
-    console.log("HOLAAAAAAAAAAAAAA");
-    console.log("req.body.email" + req.body.email);
-    console.log("req.body.name" + req.body.name);
-    console.log("to req.body.name" + typeof(req.body.name));
+    console.log("getting user by email");
     let q = `SELECT * FROM USRS WHERE email='${email}'`;
     return sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
 }
 
 let generateToken = (user)=>{
+    console.log("generating token");
     let newUser = {
         email: user.email
     }
@@ -50,6 +48,7 @@ let generateToken = (user)=>{
 }
 
 exports.login = async(req, res) =>{
+    console.log("Logging");
     let {email, password} = req.body;
     let usrByEmail = await getUsersByEmail(req, res);
     console.log("usrByEmail: " + usrByEmail);
@@ -68,7 +67,9 @@ exports.login = async(req, res) =>{
             console.log("Correct user and token. LOOGED");
             msg = "Correct user and token. LOOGED";
             resul = true;
-            res.json({"msg":msg});
+            res.status(200).send({
+                message: 'Good'
+            });
         }else{
             console.log("Wrong user or password");
             msg = "Wrong user or password";
@@ -83,10 +84,8 @@ exports.login = async(req, res) =>{
             message: 'Wrong',
             error
         });
-        msg = "Wrong user or password 2";
         resul =  true;
-    }
-    
+    } 
     return resul;
 };
 
