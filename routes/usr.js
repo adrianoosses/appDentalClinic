@@ -9,7 +9,7 @@ const {
 
 router.get('/getAll', isAdmin, getAllUsers);
 router.post('/register', register);
-router.get('/login', login);
+router.post('/login', login);
 router.get('/logout', logout);
 
 exports.routes = router;
