@@ -1,7 +1,10 @@
 const {Appointment, sequelize} = require('../models/index.js');
 
 exports.getAllAppointments =  (req, res) =>{
-    sequelize.query(`SELECT * FROM APPOINTMENTS`, {type: sequelize.QueryTypes.SELECT})
+    sequelize.query(`SELECT * 
+    FROM APPOINTMENTS
+    INNER JOIN USRS
+    ON APPOINTMENTS.patient_id = USRS.id `, {type: sequelize.QueryTypes.SELECT})
         .then(appointments => res.send(appointments))
         .catch(error => {
             console.error(error);
