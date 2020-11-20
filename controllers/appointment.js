@@ -34,10 +34,12 @@ exports.getPendingAppointments =  (req, res) =>{
 
 exports.getMyPendingAppointments =  (req, res) =>{
     let {email} = req.body;
-    let q = `SELECT * 
+    let q = `pat.email as useremail, doc.email as docemail, hour, service, status 
     FROM APPOINTMENTS
-    INNER JOIN USRS
-    ON APPOINTMENTS.patient_id = USRS.id 
+    JOIN USRS as pat
+    ON APPOINTMENTS.patient_id = pat.id
+	JOIN USRS as doc
+    ON APPOINTMENTS.doctor_id = doc.id; 
     WHERE hour > CURRENT_TIME 
     AND status = 'Pending'
     AND USRS.email = '${email}'
