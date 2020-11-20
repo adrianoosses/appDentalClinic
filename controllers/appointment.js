@@ -39,10 +39,10 @@ exports.getMyPendingAppointments =  (req, res) =>{
     JOIN USRS as pat
     ON APPOINTMENTS.patient_id = pat.id
 	JOIN USRS as doc
-    ON APPOINTMENTS.doctor_id = doc.id; 
+    ON APPOINTMENTS.doctor_id = doc.id
     WHERE hour > CURRENT_TIME 
     AND status = 'Pending'
-    AND USRS.email = '${email}'
+    AND pat.email = '${email}';
     `;
     
     sequelize.query(q, {type: sequelize.QueryTypes.SELECT})
