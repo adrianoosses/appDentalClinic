@@ -34,7 +34,7 @@ exports.getPendingAppointments =  (req, res) =>{
 
 exports.getMyPendingAppointments =  (req, res) =>{
     let {email} = req.body;
-    let q = `pat.email as useremail, doc.email as docemail, hour, service, status 
+    let q = `SELECT pat.email as useremail, doc.email as docemail, hour, service, status 
     FROM APPOINTMENTS
     JOIN USRS as pat
     ON APPOINTMENTS.patient_id = pat.id
